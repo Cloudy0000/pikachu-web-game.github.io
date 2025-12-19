@@ -55,6 +55,7 @@ class Game {
             await this.renderer.loadAssets({
                 pikachu: 'https://raw.githubusercontent.com/BKTidswell/Pokemon-Timer/main/Pokemon_Smile_Pokemon/025.png',
                 berry: 'https://www.serebii.net/pokemonsleep/berries/grepaberry.png',
+				background: 'assets/images/background.jpg',
 				jumpSound: 'assets/sounds/spring.mp3',
                 collectSound: 'assets/sounds/pikachu.mp3'
             });
@@ -124,7 +125,7 @@ class Game {
         this.renderer.clear();
         
         // 1. Фон
-        this.renderer.drawRect(0, 0, this.width, this.height, '#87CEEB');
+        this.renderer.drawImage('background', 0, 0, this.width, this.height);
 
         // 2. Платформы
         this.platforms.forEach(p => p.draw(this.ctx));
@@ -183,5 +184,6 @@ class Game {
         this.ctx.textAlign = 'start';
     }
 }
+
 
 export default Game;
