@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Platformer JS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Основной холст для отрисовки Canvas API -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <div class="controls-hint">
+            <p>Управление: Стрелки — движение | Пробел — прыжок | F5 — рестарт</p>
+        </div>
+    </div>
+
+    <!-- 
+        Важно: используем type="module", чтобы работали import/export.
+        Файл main.js инициализирует класс Game.
+    -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
